@@ -1,0 +1,21 @@
+/* Variables */
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+}
+
+/* Global */
+
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+/* Container */
+
+.container {
+    display: grid;
+    grid-template-columns: 71.5px 260px 1fr;
+    /* 200px aside */
+}
