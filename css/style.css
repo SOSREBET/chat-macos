@@ -1,14 +1,25 @@
 /* Variables */
 
 :root {
-    --white: #ffffff;
+    --white: #FFFFFF;
+    --white-dull: #d6d6d6;
     --white-10: rgba(255, 255, 255, 0.1);
-
+    --white-20: rgba(255, 255, 255, 0.2);
+    --white-40: rgba(255, 255, 255, 0.4);
     --black: #000000;
     --black-75: rgb(0, 0, 0, 0.75);
     
-    --secondary-text: #919191;
+    --server-bg: #EA4C89;
+
     --sidebar-bg: rgba(37, 39, 42, 0.75);
+    --sidebar-grey: #919191;
+    --sidebar-light-grey: #B5B5B5;
+    --friend-online: #70CC16;
+    --friend-offline: #666666;
+
+    --chat-grey: #8D8D8D;
+    --chat-light-grey: #A4A4A4;
+
 }
 
 /* Global */
@@ -24,6 +35,21 @@ body {
     font-style: normal;
     font-size: 14px;
     line-height: 17px;
+}
+
+/* Visually hidden */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Container */
@@ -47,9 +73,7 @@ body {
 }
 
 .servers {
-    max-height: 726px;
-    height: 100%;
-
+    max-height: calc(100vh - 100px);
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -59,7 +83,7 @@ body {
     display: none;
 }
 
-/* Server list && item */
+/* Server list */
 
 .server-list {
     width: 70px;
@@ -68,6 +92,11 @@ body {
 .server-item {
     opacity: 0.3;
     height: 58px;
+}
+
+.server-item img {
+    background-color: var(--server-bg);
+    border-radius: 50%;
 }
 
 .server-item a {
@@ -135,7 +164,7 @@ body {
 .sidebar {
     display: grid;
     grid-template-rows: 90px 1fr;
-    padding: 35px 23px 0px 23px;
+    padding: 35px 6.5px 0px 23px;
     background-color: var(--sidebar-bg);
     color: var(--white);
 }
@@ -146,6 +175,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    padding-right: 16.5px;
 }
 
 .menu {
@@ -174,21 +204,132 @@ body {
 }
 
 .sidebar-heading {
-    color: var(--secondary-text);
+    color: var(--sidebar-grey);
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
 }
 
-/* Nav channels */
+/* Channel list friends  */
 
-/* .nav-channels {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-} */
+.nav-channels-friends {
+    padding-right: 10.5px;
+    max-height: calc(100vh - 145px);
+    overflow-y: auto;
+    scrollbar-color: var(--white-40) transparent;
+}
 
-.channel-list {
+.nav-channels-friends::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.nav-channels-friends::-webkit-scrollbar {
+	width: 7px;
+	background-color: transparent;
+}
+
+.nav-channels-friends::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--white-20);
+}
+
+/* Channels */
+
+.channels {
+    margin-top: 16px;
+}
+
+ul.channel-list {
     width: 100%;
+    margin-top: 14px;
+}
+
+.channel-list li:not(:last-child) {
+    margin-bottom: 1px;
+}
+
+.channel-list .current-channel {
+    color: var(--white);
+    font-weight: 700;
+    background-color: var(--white-20);
+    border-radius: 5px;
+}
+
+.channel-list div {
+    color: var(--sidebar-light-grey);
+    /* padding: 5px 13px 6px 13px; */
+}
+
+.channel-list div:hover {
+    background-color: var(--white-10);
+    color: var(--white-dull);
+    border-radius: 5px;
+}
+
+.channel-list div:active {
+    background-color: var(--white-20);
+    color: var(--white);
+}
+
+/* Link channel */
+
+.link-channel {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 13px 6px 13px;
+}
+
+.link-channel::before {
+    content: "# ";
+}
+
+/* Friends */
+
+.friends {
+    margin-top: 17.5px;
+}
+
+ul.friend-list {
+    margin-top: 22.5px;
+}
+
+.friend-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: var(--sidebar-light-grey);
+    height: 32px;
+}
+
+.friend-item:hover {
+    background-color: var(--white-10);
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.friend-list .friend-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.friend-item img {
+    margin-right: 12.5px;
+    background-color: var(--black);
+    border-radius: 4px;
+}
+
+.friend-item::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--friend-offline);
+    margin-right: 8px;
+}
+
+.friend-item.friend-online::before {
+    background-color: var(--friend-online);
 }
