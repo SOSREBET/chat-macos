@@ -2,20 +2,193 @@
 
 :root {
     --white: #ffffff;
-    --black: #000000;
+    --white-10: rgba(255, 255, 255, 0.1);
 
+    --black: #000000;
+    --black-75: rgb(0, 0, 0, 0.75);
+    
+    --secondary-text: #919191;
+    --sidebar-bg: rgba(37, 39, 42, 0.75);
 }
 
 /* Global */
 
+html, body {
+    height: 100vh;
+    max-height: 100vh;
+}
+
 body {
     font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 /* Container */
 
 .container {
+    height: 100vh;
     display: grid;
-    grid-template-columns: 71.5px 260px 1fr;
+    grid-template-columns: 70px 260px 1fr;
     /* 200px aside */
+}
+
+/* Nav servers */
+
+.nav-servers {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black-75);
+    padding-top: 41.5px;
+}
+
+.servers {
+    max-height: 726px;
+    height: 100%;
+
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.servers::-webkit-scrollbar {
+    display: none;
+}
+
+/* Server list && item */
+
+.server-list {
+    width: 70px;
+}
+
+.server-item {
+    opacity: 0.3;
+    height: 58px;
+}
+
+.server-item a {
+    display: block;
+    height: 100%;
+    padding: 9px 15px;
+}
+
+.server-item.current-server {
+    opacity: 1;
+}
+
+/* Add server */
+
+.add-server-wrapper {
+    width: 70px;
+    height: 58px;
+}
+
+.add-server-wrapper a {
+    display: block;
+    height: 100%;
+    padding: 9px 15px;
+}
+
+.add-server {
+    width: 40px;
+    height: 40px;
+    background-color: var(--white-10);
+    border-radius: 50%;
+    position: relative;
+}
+
+.add-server a {
+    display: block;
+    height: 100%;
+}
+
+.add-server-plus {
+    opacity: 0.4;
+}
+
+.add-server-plus::before, .add-server-plus::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--white);
+}
+
+.add-server-plus::before {
+    top: 19px;
+    left: 13px;
+}
+
+.add-server-plus::after {
+    top: 19px;
+    left: 13px;
+    transform: rotate(90deg);
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 90px 1fr;
+    padding: 35px 23px 0px 23px;
+    background-color: var(--sidebar-bg);
+    color: var(--white);
+}
+
+/* Sidebar menu */
+
+.sidebar-menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.server-settings {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/gui_icons/settings.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Sidebar heading */
+
+.sidebar-heading {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.sidebar-heading {
+    color: var(--secondary-text);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+/* Nav channels */
+
+/* .nav-channels {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+} */
+
+.channel-list {
+    width: 100%;
 }

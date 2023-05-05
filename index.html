@@ -8,38 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/zeroing.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <nav class="nav-servers">
-            <ul class="server-list">
-                <li class="server-item current-server">
-                    <img src="img/server_icons/server-1.png" alt="Server 1" width="40" height="40">
-                </li>
-                <li class="server-item">
-                    <img src="img/server_icons/server-2.png" alt="Server 2" width="40" height="40">
-                </li>
-                <li class="server-item">
-                    <img src="img/server_icons/server-3.png" alt="Server 3" width="40" height="40">
-                </li>
-                <li class="server-item">
-                    <img src="img/server_icons/server-4.png" alt="Server 4" width="40" height="40">
-                </li>
-                <li class="server-item">
-                    <img src="img/server_icons/server-5.png" alt="Server 5" width="40" height="40">
-                </li>
-                <li class="server-item">
-                    <img src="img/server_icons/server-6.png" alt="Server 6" width="40" height="40">
-                </li>
-                <li class="server-item">
-                    <img src="img/server_icons/server-7.png" alt="Server 7" width="40" height="40">
-                </li>
-            </ul>
+            <div class="servers">
+                <ul class="server-list">
+                    <li class="server-item icon-1 current-server">
+                        <a>
+                            <img src="img/server_icons/server-1.svg" alt="Server 1" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                    <li class="server-item icon-2">
+                        <a href="#">
+                            <img src="img/server_icons/server-2.svg" alt="Server 2" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                    <li class="server-item icon-3">
+                        <a href="#">
+                            <img src="img/server_icons/server-3.svg" alt="Server 3" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                    <li class="server-item icon-4">
+                        <a href="#">
+                            <img src="img/server_icons/server-4.svg" alt="Server 4" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                    <li class="server-item icon-5">
+                        <a href="#">
+                            <img src="img/server_icons/server-5.svg" alt="Server 5" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                    <li class="server-item icon-6">
+                        <a href="#">
+                            <img src="img/server_icons/server-6.svg" alt="Server 6" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                    <li class="server-item icon-7">
+                        <a href="#">
+                            <img src="img/server_icons/server-7.svg" alt="Server 7" width="40" height="40" class="server-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <div class="add-server"></div>
+            <div class="add-server-wrapper">
+                <a href="#">
+                    <div class="add-server">
+                        <div class="add-server-plus"></div>
+                    </div>
+                </a>
+            </div>
         </nav>
 
         <div class="sidebar">
@@ -58,8 +79,10 @@
             </div>
 
             <nav class="nav-channels">
-                <p>Channels</p>
-                <span class="channel-count">11</span>
+                <div class="sidebar-heading">
+                    <p>Channels</p>
+                    <span class="channel-count">11</span>
+                </div>
 
                 <ul class="channel-list">
                     <li class="channel-item current-channel">general</li>
@@ -74,21 +97,23 @@
                     <li class="channel-item">italy</li>
                     <li class="channel-item">freelance</li>
                 </ul>
-            </nav>
             
-            <div class="friends">
-                <p>Friends</p>
-                <span class="friend-count">82</span>
+                <div class="friends">
+                    <div class="sidebar-heading">
+                        <p>Friends</p>
+                        <span class="friend-count">82</span>
+                    </div>
 
-                <ul class="friends-list">
-                    <li class="friend-item friend-online"></li>
-                    <li class="friend-item friend-online"></li>
-                    <li class="friend-item"></li>
-                    <li class="friend-item"></li>
-                    <li class="friend-item"></li>
-                    <li class="friend-item"></li>
-                </ul>
-            </div>
+                    <ul class="friends-list">
+                        <li class="friend-item friend-online">Orlando Diggs</li>
+                        <li class="friend-item friend-online">Carmen Velasco</li>
+                        <li class="friend-item">Marie Jensen</li>
+                        <li class="friend-item">Alex Lee</li>
+                        <li class="friend-item">Leo Gill</li>
+                        <li class="friend-item">Britney Cooper</li>
+                    </ul>
+                </div>
+            </nav>
 
         </div>
 
@@ -194,7 +219,7 @@
 
                     <ul class="profile-about">
                         <li>
-                            <span class="profile-status">Username</span>
+                            <span class="profile-status">Usernameh</span>
                             <p>@amilia_lu</p>
                        </li>
                        
