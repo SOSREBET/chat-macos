@@ -92,6 +92,7 @@ body {
 .server-item {
     opacity: 0.3;
     height: 58px;
+    transition: opacity 0.2s;
 }
 
 .server-item img {
@@ -106,6 +107,10 @@ body {
 }
 
 .server-item.current-server {
+    opacity: 1;
+}
+
+.server-item:hover, .server-item:active {
     opacity: 1;
 }
 
@@ -128,6 +133,15 @@ body {
     background-color: var(--white-10);
     border-radius: 50%;
     position: relative;
+    transition: border-radius 0.2s ease-in-out;
+}
+
+.add-server:hover {
+    border-radius: 30%;
+}
+
+.add-server:hover .add-server-plus {
+    opacity: 1;
 }
 
 .add-server a {
@@ -136,6 +150,7 @@ body {
 }
 
 .add-server-plus {
+    transition: opacity 0.2s ease-in-out;
     opacity: 0.4;
 }
 
@@ -298,6 +313,15 @@ ul.friend-list {
 }
 
 .friend-item {
+    height: 32px;
+}
+
+.friend-link {
+    display: block;
+    text-decoration: none;
+}
+
+.friend-block {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -308,6 +332,18 @@ ul.friend-list {
 .friend-item:hover {
     background-color: var(--white-10);
     border-radius: 5px;
+}
+
+.friend-item:hover p {
+    color: var(--white-dull);
+}
+
+.friend-item:active {
+    background-color: var(--white-20);
+    border-radius: 5px;
+}
+
+.friend-item:active p {
     color: var(--white);
 }
 
@@ -321,8 +357,9 @@ ul.friend-list {
     border-radius: 4px;
 }
 
-.friend-item::before {
+.friend-block::before {
     content: "";
+    display: block;
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -330,6 +367,6 @@ ul.friend-list {
     margin-right: 8px;
 }
 
-.friend-item.friend-online::before {
+.friend-block.friend-online::before {
     background-color: var(--friend-online);
 }
