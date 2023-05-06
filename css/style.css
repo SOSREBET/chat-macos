@@ -6,6 +6,7 @@
     --white-10: rgba(255, 255, 255, 0.1);
     --white-20: rgba(255, 255, 255, 0.2);
     --white-40: rgba(255, 255, 255, 0.4);
+    --white-80: rgba(255, 255, 255, 0.8);
     --black: #000000;
     --black-75: rgb(0, 0, 0, 0.75);
     
@@ -21,6 +22,9 @@
     --chat-grey: #8D8D8D;
     --chat-light-grey: #A4A4A4;
 
+    --profile-grey: #5F6164;
+    --profile-white-dull: #E8E8EB;
+    --profile-blue: #3577EF;
 }
 
 /* Global */
@@ -59,7 +63,6 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 70px 260px 1fr;
-    /* 200px aside */
 }
 
 /* Nav servers */
@@ -220,7 +223,7 @@ body {
 
 .channel-select {
     position: relative;
-    width: 143px;
+    width: auto;
     margin-left: -10px;
 }
 
@@ -289,7 +292,7 @@ body {
 .channel-select ul {
     position: absolute;
 	left: 0;
-	width: 143px;
+    width: 100%;
 	padding: 0px 10px 7px 10px;
 	margin: 0;
 	box-sizing: border-box;
@@ -428,7 +431,6 @@ ul.channel-list {
 
 .channel-list div {
     color: var(--sidebar-light-grey);
-    /* padding: 5px 13px 6px 13px; */
 }
 
 .channel-list div:hover {
@@ -521,6 +523,96 @@ ul.friend-list {
     margin-right: 8px;
 }
 
-.friend-block.friend-online::before {
+.friend-block.online::before {
     background-color: var(--friend-online);
 }
+
+/* Chat */
+
+.chat {
+    display: flex;
+}
+
+.chat-wrapper {
+    width: 100%;
+}
+
+
+/* Profile panel */
+
+.profile-panel {
+    min-width: 200px;
+    max-width: 200px;
+    background-color: var(--white-80);
+}
+
+/* Profile heading */
+
+.profile-heading {
+    margin-top: 15px;
+}
+
+.profile-name {
+    display: block;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    position: relative;
+    word-break: break-all;
+}
+
+.profile-name::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--friend-offline);
+    margin-left: 5.5px;
+}
+
+.profile-name.online::after {
+    background-color: var(--friend-online);
+}
+
+.profile-status {
+    color: var(--profile-grey);
+    font-size: 12px;
+    line-height: 14px;
+    word-break: break-all;
+}
+
+ul.profile-social-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+}
+
+.profile-social-item a {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--profile-white-dull);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-social-item a:hover, .profile-social-item a:active {
+    background-color: #3577EF;
+}
+
+.profile-social-item a:hover svg, 
+.profile-social-item a:active svg {
+    opacity: 1;
+}
+
+.profile-social-list .profile-social-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.profile-social-item svg {
+    opacity: 0.5;
+}
+

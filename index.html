@@ -128,7 +128,7 @@
                     <ul class="friend-list">
                         <li class="friend-item">
                             <a href="#" class="friend-link">
-                                <div class="friend-block friend-online">
+                                <div class="friend-block online">
                                     <img src="/img/user_avatars/user-6.png" alt="" width="32" height="32">
                                     <p>Orlando Diggs</p>
                                 </div>
@@ -136,7 +136,7 @@
                         </li>
                         <li class="friend-item">
                             <a href="#" class="friend-link">
-                                <div class="friend-block friend-online">
+                                <div class="friend-block online">
                                     <img src="/img/user_avatars/user-1.png" alt="" width="32" height="32">
                                     <p>Carmen Velasco</p>
                                 </div>
@@ -245,66 +245,80 @@
             </div>
 
             <aside class="profile-panel">
-                <div class="profile">
-                    <img src="img/user_avatars/user-12.png" alt="Amilia's avatar" width="201" height="201" class="profile-avatar">
+                <img src="img/user_avatars/user-12.png" alt="Amilia's avatar" width="200" height="200" class="profile-avatar">
 
-                    <div class="profile-heading">
-                        <span class="profile-name online">Amilia Luna</span>
-                        <span class="profile-status">UI Designer</span>
-                    </div>
-
-                    <ul class="profile-social-list">
-                        <li class="profile-social-item">
-                            <span class="visually-hidden">Facebook</span>
-                            <div class="facebook-icon"></div>
-                        </li>
-
-                        <li class="profile-social-item">
-                            <span class="visually-hidden">Twitter</span>
-                            <div class="twitter-icon"></div>
-                        </li>
-
-                        <li class="profile-social-item">
-                            <span class="visually-hidden">Instagram</span>
-                            <div class="instagram-icon"></div>
-                        </li>
-
-                        <li class="profile-social-item">
-                            <span class="visually-hidden">In</span>
-                            <div class="in-icon"></div>
-                        </li>
-                    </ul>
-
-                    <div class="profile-actions">
-                        <a href="#" class="btn-primary profile-message">Message</a>
-                        <button type="button" class="profile-more-actions" aria-label="More actions"></button>
-                    </div>
-
-                    <ul class="profile-about">
-                        <li>
-                            <span class="profile-status">Usernameh</span>
-                            <p>@amilia_lu</p>
-                       </li>
-                       
-                       <li>
-                            <span class="profile-status">Email</span>
-                            <p>a-luna@gmail.com</p>
-                       </li>
-                       
-                       <li>
-                            <span class="profile-status">Skype</span>
-                            <p>amiluna</p>
-                       </li>
-                       
-                       <li>
-                            <span class="profile-status">Timezone</span>
-                            <p>2:21 PM Local time</p>
-                       </li>
-                       
-                    </ul>
+                <div class="profile-heading">
+                    <span class="profile-name online">Amilia Luna</span>
+                    <span class="profile-status">UI Designer</span>
                 </div>
 
-                <button type="button" aria-label="Close profile close-icon"></button>
+                <ul class="profile-social-list">
+                    <li class="profile-social-item">
+                        <a href="#">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg width="6" height="13" viewBox="0 0 6 13" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.49374 12.4833H3.67461V6.43104H5.19618L5.3584 4.405H3.67461C3.67461 4.405 3.67461 3.64854 3.67461 3.25095C3.67461 2.7733 3.7614 2.5842 4.17813 2.5842C4.5135 2.5842 5.3584 2.5842 5.3584 2.5842V0.481531C5.3584 0.481531 4.11396 0.481531 3.84827 0.481531C2.2254 0.481531 1.49374 1.27332 1.49374 2.78946C1.49374 4.11002 1.49374 4.405 1.49374 4.405H0.359534V6.45673H1.49374V12.4833Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="profile-social-item">
+                        <a href="#">
+                            <span class="visually-hidden">Twitter</span>
+                            <svg width="13" height="10" viewBox="0 0 13 10" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.96691 8.97588C2.05697 9.62061 3.35155 9.99688 4.74228 9.99688C9.31531 9.99688 11.8986 6.43349 11.7431 3.23743C12.2241 2.91719 12.6418 2.51698 12.9719 2.06117C12.5301 2.24194 12.0554 2.3642 11.5573 2.41895C12.0657 2.13808 12.4563 1.69267 12.6402 1.16186C12.1643 1.42231 11.6371 1.61152 11.0762 1.71327C10.6271 1.27162 9.98706 0.995726 9.27843 0.995726C7.68886 0.995726 6.52019 2.36448 6.87909 3.78608C4.83215 3.69115 3.01736 2.78649 1.80287 1.41177C1.15767 2.43306 1.46817 3.76934 2.56507 4.44535C2.16119 4.43368 1.78126 4.33125 1.44914 4.16125C1.42268 5.21397 2.24014 6.1984 3.42473 6.41822C3.07811 6.50501 2.6985 6.52504 2.31273 6.45704C2.62591 7.35969 3.53564 8.01649 4.61327 8.03484C3.57795 8.78376 2.27368 9.11817 0.96691 8.97588Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="profile-social-item">
+                        <a href="#">
+                            <span class="visually-hidden">Instagram</span>
+                            <svg width="12" height="13" viewBox="0 0 12 13" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23184 4.335C7.69787 3.77275 6.95636 3.42348 6.13575 3.42348C5.31513 3.42348 4.57355 3.77275 4.04007 4.335H0.394543V2.78479C0.394543 1.98929 0.774221 1.28629 1.35518 0.858856V3.4003H1.8214V0.59454C1.92704 0.550624 2.03686 0.514485 2.14975 0.487296V3.4003H2.61589V0.425884C2.62377 0.4258 2.63155 0.425576 2.63932 0.425352C2.64906 0.425071 2.65878 0.424791 2.66862 0.424791H2.9379V3.4003H3.40412V0.424791H9.61813C10.8738 0.424791 11.8922 1.48146 11.8922 2.78479H11.8919V4.335H8.23184ZM9.25874 1.41151C9.05704 1.41151 8.89373 1.58107 8.89373 1.79007V3.09431C8.89373 3.30331 9.05704 3.47287 9.25874 3.47287H10.4878C10.6894 3.47287 10.8527 3.30331 10.8527 3.09431V1.79007C10.8527 1.58107 10.6894 1.41151 10.4878 1.41151H9.25874ZM7.0706 4.335C7.27438 4.43132 7.46195 4.55782 7.62826 4.70884C8.10224 5.14061 8.40232 5.77305 8.40232 6.47714C8.40232 7.77451 7.3856 8.82962 6.13575 8.82962C4.88613 8.82962 3.86942 7.77451 3.86942 6.47714C3.86942 5.77305 4.1695 5.14061 4.64348 4.70884C4.80953 4.55782 4.99728 4.43132 5.20089 4.335C5.4862 4.20052 5.80271 4.12476 6.13575 4.12476C6.46903 4.12476 6.78554 4.20052 7.0706 4.335ZM4.46814 6.47714C4.46814 7.43735 5.218 8.21568 6.14317 8.21568C7.06834 8.21568 7.81827 7.43735 7.81827 6.47714C7.81827 5.51713 7.06834 4.73888 6.14317 4.73888C5.218 4.73888 4.46814 5.51713 4.46814 6.47714ZM9.61813 12.4205H2.66862C1.41292 12.4205 0.394543 11.3641 0.394543 10.0605V4.70884H3.73825C3.39577 5.20793 3.19392 5.81781 3.19392 6.47714C3.19392 8.16352 4.51112 9.5309 6.13575 9.5309C7.76054 9.5309 9.07791 8.16352 9.07791 6.47714C9.07791 5.81781 8.87572 5.20793 8.53349 4.70884H11.8922V10.0605C11.8922 11.3641 10.8741 12.4205 9.61813 12.4205Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="profile-social-item">
+                        <a href="#">
+                            <span class="visually-hidden">In</span>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.79959 3.6122C2.54101 3.6122 3.14208 3.00639 3.14208 2.25956C3.14208 1.51255 2.54101 0.907112 1.79959 0.907112C1.05825 0.907112 0.457187 1.51255 0.457187 2.25956C0.457187 3.00639 1.05825 3.6122 1.79959 3.6122ZM0.675475 11.9023H2.94548V4.57212H0.675475V11.9023ZM7.95728 6.41019C7.04879 6.41019 6.57406 7.02374 6.57406 8.05456V11.9023H4.39677V4.57212H6.57406V5.55941C6.57406 5.55941 7.22886 4.3483 8.78397 4.3483C10.3392 4.3483 11.4523 5.29759 11.4523 7.26101V11.9023H9.1932V8.05456C9.1932 6.99909 8.79215 6.41019 7.95728 6.41019Z" fill="black"/>
+                            </svg>
+                        </a> 
+                    </li>
+                </ul>
+
+                <div class="profile-actions">
+                    <a href="#" class="btn-primary profile-message">Message</a>
+                    <button type="button" class="profile-more-actions" aria-label="More actions"></button>
+                </div>
+
+                <ul class="profile-about">
+                    <li>
+                        <span class="profile-status">Username</span>
+                        <p>@amilia_lu</p>
+                   </li>
+                       
+                   <li>
+                        <span class="profile-status">Email</span>
+                        <p>a-luna@gmail.com</p>
+                   </li>
+                       
+                   <li>
+                        <span class="profile-status">Skype</span>
+                        <p>amiluna</p>
+                   </li>
+                       
+                       <li>
+                        <span class="profile-status">Timezone</span>
+                        <p>2:21 PM Local time</p>
+                   </li>
+                       
+                </ul>
+
+                <button type="button" aria-label="Close profile" class="close-icon"></button>
             </aside>
         </div>
 
