@@ -181,50 +181,39 @@
         </div>
 
         <div class="chat">
-            <div class="chat-wrapper">
-                <section class="chat-title">
-                    <div class="chat-heading">
-                        <span class="visually-hidden">Chat</span>
-                        <h1>general</h1>
+            <main class="chat-content">
+                    <span class="visually-hidden">Chat</span>
 
-                        <div class="chat-favorite">
-                            <span class="visually-hidden">Add to favorites</span>
-                            <form action="/" method="post">
-                                <button class="add-favorite" type="submit" aria-label="Add to favorites"></button>
-                            </form>
+                    <section class="chat-title" aria-label="Channel title">
+                        <div class="chat-heading">
+                            <h1>general</h1>
+    
+                            <div class="chat-favorite">
+                                <span class="visually-hidden">Add to favorites</span>
+                                <a class="add-favorite" aria-label="Add to favorites"></a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="chat-toolbar">
-                        <div class="member-count">
-                            <span class="visually-hidden">Member count</span>
-                            <span class="member-icon"></span>
-                            1,093
-                        </div>
-                        <!-- Разделитель "," делается через JS (пока так) -->
-
-                        <div class="toolbar-search">
-                            <span class="visually-hidden">Search</span>
-                            <form action="/" method="get">
-                                <input type="text" name="toolbar-search" id="toolbar-search">
+    
+                        <div class="chat-toolbar">
+                            <a href="#" class="member-count-wrapper">
+                                <div class="member-count" aria-label="Member count">1,093</div>
+                            </a>
+                            <!-- Разделитель "," делается через JS (пока так) -->
+    
+                            <form action="/" method="get" class="toolbar-search" aria-label="Search">
+                                <input type="text" name="message-search" id="toolbar-search" placeholder="Search...">
                                 <button type="submit" class="search-icon"></button>
                             </form>
+    
+                            <a href="#" class="toolbar-notifications-wrapper">
+                                <div class="toolbar-notifications notify" aria-label="Notifications"></div>
+                            </a>
+    
+                            <a href="#" class="toolbar-options-wrapper">
+                                <div class="toolbar-options" aria-label="Options"></div>
+                            </a>
                         </div>
-
-                        <a href="#" class="toolbar-notifications">
-                            <span class="visually-hidden">Notifications</span>
-                            <span class="notifications-icon"></span>
-                        </a>
-
-                        <a href="#" class="toolbar-options">
-                            <span class="visually-hidden">Options</span>
-                            <span class="options-icon"></span>
-                        </a>
-                    </div>
-                </section>
-
-                <main class="chat-content">
-                    <span class="visually-hidden">Chat</span>
+                    </section>
 
                     <div class="chat-messages">
                         <ol class="message-list">
@@ -241,8 +230,7 @@
 
                         <button type="button" class="emoji-icon"></button>
                     </form>
-                </main>
-            </div>
+            </main>
 
             <aside class="profile-panel">
                 <div class="profile-panel-wrapper">
