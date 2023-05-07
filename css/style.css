@@ -10,6 +10,10 @@
     --black: #000000;
     --black-75: rgb(0, 0, 0, 0.75);
     
+    --btn-primary-bg: #3577EF;
+    --btn-primary-bg-hover: #2d63c7;
+    --btn-primary-bg-active: #2553a8;
+
     --server-bg: #EA4C89;
 
     --sidebar-bg: rgba(37, 39, 42, 0.75);
@@ -24,7 +28,7 @@
 
     --profile-grey: #5F6164;
     --profile-white-dull: #E8E8EB;
-    --profile-blue: #3577EF;
+    /* --profile-blue: #3577EF; */
 }
 
 /* Global */
@@ -55,6 +59,28 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+/* Btn primary */
+
+.btn-primary {
+    text-align: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    background-color: var(--btn-primary-bg);
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-bg-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--btn-primary-bg-active);
 }
 
 /* Container */
@@ -297,7 +323,7 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	max-height: 200px;
-	overflow-y: hidden;
+	overflow-y: auto;
     list-style: none;
     background-color: var(--sidebar-dropdown-bg);
     border-bottom: 2px solid var(--white-40);
@@ -544,13 +570,16 @@ ul.friend-list {
     min-width: 200px;
     max-width: 200px;
     background-color: var(--white-80);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.profile-panel-inner {
+    padding: 15px 20px;
 }
 
 /* Profile heading */
-
-.profile-heading {
-    margin-top: 15px;
-}
 
 .profile-name {
     display: block;
@@ -616,3 +645,127 @@ ul.profile-social-list {
     opacity: 0.5;
 }
 
+/* Profile actions */
+
+.profile-actions {
+    display: flex;
+    margin-top: 18px;
+}
+
+.profile-actions .profile-message {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    margin-right: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profile-actions-select {
+    padding: 0px;
+    position: relative;
+}
+
+.profile-actions-select[open] {
+	z-index: 1;
+}
+
+.profile-actions-summary {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-actions-summary::-webkit-details-marker {
+	display: none;
+}
+
+.profile-actions-summary::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 6px;
+    background-image: url('../img/gui_icons/rectangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.profile-actions-summary:focus {
+    outline: none;
+}
+
+.profile-actions-select[open] .profile-actions-summary::after {
+	transform: rotate(180deg);
+}
+
+.profile-actions-select[open] {
+    background-color: var(--btn-primary-bg-hover);
+}
+
+ul.profile-actions-list {
+    position: absolute;
+    top: 29px;
+	right: 0;
+    width: 160px;
+	padding: 5px;
+	margin: 0;
+	box-sizing: border-box;
+	max-height: 200px;
+	overflow-y: hidden;
+    list-style: none;
+    background-color: var(--btn-primary-bg-hover);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.profile-actions-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-actions-link:hover div {
+    background-color: var(--btn-primary-bg);
+    border-radius: 5px;
+}
+
+/* Profile about */
+
+ul.profile-about {
+    margin-top: 14px;
+}
+
+.profile-about li:not(:first-child) {
+    margin-top: 11px;
+}
+
+/* Profile close */
+
+.profile-close-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.profile-close {
+    display: block;
+    width: 10px;
+    height: 16px;
+    margin: 0 23px 28px 0;
+    background-color: transparent;
+    background-image: url('../img/gui_icons/profile-close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.profile-close:hover {
+    opacity: 1;
+}
