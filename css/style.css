@@ -27,6 +27,7 @@
 
     --chat-grey: #8D8D8D;
     --chat-light-grey: #A4A4A4;
+    --notify: #FD4948;
 
     --profile-grey: #5F6164;
     --profile-white-dull: #E8E8EB;
@@ -459,6 +460,7 @@ ul.channel-list {
 
 .channel-list div {
     color: var(--sidebar-light-grey);
+    cursor: pointer;
 }
 
 .channel-list div:hover {
@@ -563,7 +565,7 @@ ul.friend-list {
 
 .chat-content {
     display: grid;
-    grid-template-rows: 81px 1fr 72px;
+    grid-template-rows: 81px 1fr 73px;
     width: 100%;
 }
 
@@ -605,11 +607,17 @@ ul.friend-list {
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.4;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
 }
 
 .add-favorite:hover {
     opacity: 1;
+}
+
+.add-favorite:active {
+    opacity: 1;
+    transform: scale(1.1) translate(0, -1px);
 }
 
 /* Chat toolbar */
@@ -697,9 +705,210 @@ ul.friend-list {
     background-position: center;
     opacity: 0.24;
     transition: opacity 0.2s;
+    cursor: pointer;
 }
 
 .search-icon:hover, .search-icon:active, .search-icon:hover, .search-icon:focus {
+    opacity: 1;
+}
+
+/* Toolbar notifications */
+
+.toolbar-notifications-wrapper {
+    display: block;
+    position: relative;
+    margin-right: 22px;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+.toolbar-notifications-wrapper:hover .toolbar-notifications {
+    opacity: 1;
+}
+
+.toolbar-notifications-wrapper:active {
+    transform: translate(0, 1px);
+}
+
+.toolbar-notifications {
+    width: 14px;
+    height: 15px;
+    background-image: url('../img/gui_icons/notification.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+}
+
+.toolbar-notifications-wrapper.notify::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    width: 5px;
+    height: 5px;
+    background-color: var(--notify);
+    border-radius: 50%;
+}
+
+/* Toolbar options */
+
+.toolbar-options-wrapper {
+    width: 10px;
+}
+
+.toolbar-options-wrapper:hover .toolbar-options {
+    opacity: 1;
+}
+
+.toolbar-options {
+    width: 5px;
+    height: 16px;
+    background-image: url('../img/gui_icons/3-dots.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+/* Chat messages */
+
+
+
+/* Input message */
+
+.input-message {
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    align-items: center;
+    padding: 26px 24px;
+    position: relative;
+    border-top: 1px solid var(--black-24);
+}
+
+.input-message button {
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.input-message fieldset {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Attachment */
+
+.input-message .attachment {
+    min-width: 13px;
+    min-height: 22px;
+    margin-right: 18px;
+    background-image: url('../img/gui_icons/attachment.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.input-message .attachment:hover {
+    opacity: 1;
+}
+
+.input-message .attachment:active {
+    opacity: 1;
+    transform: translate(0, 1px);
+}
+
+/* Voice message */
+
+.input-message .voice-message {
+    min-width: 15px;
+    min-height: 21px;
+    margin-right: 20px;
+    background-image: url('../img/gui_icons/voice.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.input-message .voice-message:hover {
+    opacity: 1;
+}
+
+.input-message .voice-message:active {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* Text message */
+
+.input-message .text-message {
+    width: 100%;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+    color: var(--chat-grey);
+    transition: color 0.2s;
+}
+
+.input-message .text-message::placeholder {
+    user-select: none;
+}
+
+.input-message .text-message:hover, .input-message .text-message:active, .input-message .text-message:focus {
+    color: var(--black);
+}
+
+/* Send message */
+
+.input-message .send-message {
+    display: none;
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 20px;
+    background-image: url('../img/gui_icons/send.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.input-message .send-message:hover {
+    opacity: 1;
+}
+
+.input-message .send-message:active {
+    opacity: 1;
+    transform: translate(1px, 0);
+}
+
+/* Emoji select */
+
+.input-message .emoji-select {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('../img/gui_icons/emoji.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.input-message .emoji-select:hover {
     opacity: 1;
 }
 

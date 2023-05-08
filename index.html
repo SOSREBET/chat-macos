@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <noscript>You need JavaScript to use this site</noscript>
     <div class="container">
         <nav class="nav-servers">
             <div class="servers">
@@ -205,8 +206,8 @@
                                 <button type="submit" class="search-icon"></button>
                             </form>
     
-                            <a href="#" class="toolbar-notifications-wrapper">
-                                <div class="toolbar-notifications notify" aria-label="Notifications"></div>
+                            <a href="#" class="toolbar-notifications-wrapper notify">
+                                <div class="toolbar-notifications " aria-label="Notifications"></div>
                             </a>
     
                             <a href="#" class="toolbar-options-wrapper">
@@ -222,13 +223,15 @@
                     </div>
 
                     <form action="/" method="post" class="input-message">
-                        <div class="">
-                            <button type="button" class="attachment-icon"></button>
-                            <button type="button" class="voice-icon"></button>
-                            <input type="text" name="message" id="write-message" placeholder="Message in #general">
-                        </div>
-
-                        <button type="button" class="emoji-icon"></button>
+                        <fieldset>
+                            <button type="button" class="attachment"></button>
+                            <button type="button" class="voice-message"></button>
+                            <input type="text" name="message" id="write-message" class="text-message" minlength="1"
+                                placeholder="Message in #general" oninput="hanleSendMessage()" required>
+                            <button type="submit" class="send-message" id="send-message"></button>
+                            <script type="text/javascript" src="js/send_message.js"></script>
+                        </fieldset>
+                        <button type="button" class="emoji-select"></button>
                     </form>
             </main>
 
