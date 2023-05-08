@@ -9,6 +9,7 @@
     --white-80: rgba(255, 255, 255, 0.8);
     --black: #000000;
     --black-0001: rgb(0, 0, 0, 0.0001);
+    --black-20: rgb(0, 0, 0, 0.20);
     --black-24: rgb(0, 0, 0, 0.24);
     --black-75: rgb(0, 0, 0, 0.75);
     
@@ -39,6 +40,7 @@
 html, body {
     height: 100vh;
     max-height: 100vh;
+    overflow: hidden;
 }
 
 body {
@@ -567,6 +569,7 @@ ul.friend-list {
     display: grid;
     grid-template-rows: 81px 1fr 73px;
     width: 100%;
+    max-height: 100vh;
 }
 
 /* Chat title */
@@ -774,6 +777,31 @@ ul.friend-list {
 
 /* Chat messages */
 
+.chat-messages {
+    padding: 20px 6px 25px 25px;
+    overflow-y: auto;
+    /* right 24px - 6px = 18px - 7 px = 11px */
+}
+
+.chat-messages {
+    overflow-y: auto;
+    scrollbar-color: var(--white-40) transparent;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.chat-messages::-webkit-scrollbar {
+	width: 7px;
+	background-color: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--black-20);
+}
 
 
 /* Input message */
