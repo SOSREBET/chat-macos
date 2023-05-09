@@ -178,228 +178,244 @@
                     </ul>
                 </section>
             </nav>
-
         </div>
 
         <div class="chat">
             <main class="chat-content">
-                    <span class="visually-hidden">Chat</span>
+                <span class="visually-hidden">Chat</span>
 
-                    <section class="chat-title" aria-label="Channel title">
-                        <div class="chat-heading">
-                            <h1>general</h1>
+                <section class="chat-title" aria-label="Channel title">
+                    <div class="chat-heading">
+                        <h1>general</h1>
     
-                            <div class="chat-favorite">
-                                <span class="visually-hidden">Add to favorites</span>
-                                <a class="add-favorite" aria-label="Add to favorites"></a>
-                            </div>
+                        <div class="chat-favorite">
+                            <span class="visually-hidden">Add to favorites</span>
+                            <a class="add-favorite" aria-label="Add to favorites"></a>
                         </div>
+                    </div>
     
-                        <div class="chat-toolbar">
-                            <a href="#" class="member-count-wrapper">
-                                <div class="member-count" aria-label="Member count">1,093</div>
-                            </a>
-                            <!-- Разделитель "," делается через JS (пока так) -->
+                    <div class="chat-toolbar">
+                        <a href="#" class="member-count-wrapper">
+                            <div class="member-count" aria-label="Member count">1,093</div>
+                        </a>
+                        <!-- Разделитель "," делается через JS (пока так) -->
     
-                            <form action="/" method="get" class="toolbar-search" aria-label="Search">
-                                <input type="text" name="message-search" id="toolbar-search" placeholder="Search...">
-                                <button type="submit" class="search-icon"></button>
-                            </form>
+                        <form action="/" method="get" class="toolbar-search" aria-label="Search">
+                            <input type="text" name="message-search" id="toolbar-search" placeholder="Search...">
+                            <button type="submit" class="search-icon"></button>
+                        </form>
     
-                            <a href="#" class="toolbar-notifications-wrapper notify">
-                                <div class="toolbar-notifications " aria-label="Notifications"></div>
-                            </a>
+                        <a href="#" class="toolbar-notifications-wrapper notify">
+                            <div class="toolbar-notifications " aria-label="Notifications"></div>
+                        </a>
     
-                            <a href="#" class="toolbar-options-wrapper">
-                                <div class="toolbar-options" aria-label="Options"></div>
-                            </a>
-                        </div>
-                    </section>
+                        <a href="#" class="toolbar-options-wrapper">
+                            <div class="toolbar-options" aria-label="Options"></div>
+                        </a>
+                    </div>
+                </section>
 
-                    <div class="chat-messages">
+                <div class="chat-messages">
+                    <div class="chat-messages-inner">
                         <ol class="message-list">
-                                <!-- Message model
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-7.png" alt="" width="32" height="32">
-                                    m-r: 12
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender"></span>
-                                            <span class="message-time"></span>
-                                        </div>
-                                        <div class="message-text"></div>
-                                        <ul class="message-attachment-list">
-                                            <li><a href="#" target="blank"></a></li>
-                                        </ul>
-                                        <ul class="message-attachment-list-static">
-                                            <li></li>
-                                        </ul>
+                                                        <li class="message-item">
+                                <img src="/img/user_avatars/user-7.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Jeshua Stout</span>
+                                        <span class="message-time">6:38 PM</span>
                                     </div>
-                                </li> 
-                                
-                                <a href="#" class="user-mention"></a>
-                                -->
-
-                                <!-- Date stamp model
-                                <div class="chat-divider"></div>
-                                -->
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-11.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Ramon Bateman</span>
-                                            <span class="message-time">11:59 AM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            <a href="#" class="user-mention">@aa_da</a>
-                                            @aa_da What's the reason for the van? Saving money or just 
-                                            like to get outside? If you've got a stable source of income 
-                                            you could always do some short term Airbnbs + buy a truck/topper, 
-                                            build a platform in the back. That way you can always convert it 
-                                            back to a truck and sleep in an apartment if you want.
-                                        </div>
+                                    <div class="message-text">
+                                        <a href="#" class="link-primary">@pierrhack</a>
+                                        I did for 6 days in Iceland
                                     </div>
-                                </li> 
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-11.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Ramon Bateman</span>
-                                            <span class="message-time">11:59 AM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            <a href="#" class="user-mention">@aa_da</a>
-                                            @aa_da What's the reason for the van? Saving money or just 
-                                            like to get outside? If you've got a stable source of income 
-                                            you could always do some short term Airbnbs + buy a truck/topper, 
-                                            build a platform in the back. That way you can always convert it 
-                                            back to a truck and sleep in an apartment if you want.
-                                        </div>
+                                </div>
+                            </li>
+
+                            <div class="chat-divider">Monday, October 22nd</div>
+
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-8.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Harold Adams</span>
+                                        <span class="message-time">5:02 PM</span>
                                     </div>
-                                </li> 
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-11.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Ramon Bateman</span>
-                                            <span class="message-time">11:59 AM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            <a href="#" class="user-mention">@aa_da</a>
-                                            @aa_da What's the reason for the van? Saving money or just 
-                                            like to get outside? If you've got a stable source of income 
-                                            you could always do some short term Airbnbs + buy a truck/topper, 
-                                            build a platform in the back. That way you can always convert it 
-                                            back to a truck and sleep in an apartment if you want.
-                                        </div>
+                                    <div class="message-text">
+                                        Which country to visit next? This is a photo with my
+                                        friends - celebrating in Bali 😎
                                     </div>
-                                </li> 
+                                    <ul class="message-attachment-list">
+                                        <li><a href="/img/user_static/image/my-top-places.jpg" class="link-primary" target="blank">
+                                            my-top-places.jpg
+                                        </a></li>
+                                    </ul>
+                                    <ul class="message-attachment-list-static">
+                                        <li><img src="/img/user_static/image/my-top-places.jpg" alt="my-top-places" width="266" height="200"></li>
+                                    </ul>
+                                </div>
+                            </li>
 
+                            <div class="chat-divider">Yesterday</div>
 
-
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-7.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Jeshua Stout</span>
-                                            <span class="message-time">6:38 PM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            <a href="#" class="user-mention">@pierrhack</a>
-                                            I did for 6 days in Iceland
-                                        </div>
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-9.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Aada Laine</span>
+                                        <span class="message-time">11:54 AM</span>
                                     </div>
-                                </li>
-
-                                <div class="chat-divider">Monday, October 22nd</div>
-
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-8.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Harold Adams</span>
-                                            <span class="message-time">5:02 PM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            Which country to visit next? This is a photo with my 
-                                            friends - celebrating in Bali 😎
-                                        </div>
-                                        <ul class="message-attachment-list">
-                                            <li><a href="/img/user_static/image/my-top-places.jpg" target="blank">my-top-places.jpg</a></li>
-                                        </ul>
-                                        <ul class="message-attachment-list-static">
-                                            <li><img src="/img/user_static/image/my-top-places.jpg" alt="my-top-places" width="266" height="200"></li>
-                                        </ul>
+                                    <div class="message-text">
+                                        <a href="#" class="link-primary">@har_adams</a>
+                                        wow it’s amazing, I want to buy a van and travelling next year 🚌
                                     </div>
-                                </li> 
+                                </div>
+                            </li>
 
-                                <div class="chat-divider">Yesterday</div>
+                            <div class="chat-divider">Today</div>
 
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-9.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Aada Laine</span>
-                                            <span class="message-time">11:54 AM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            <a href="#" class="user-mention">@har_adams</a>
-                                            wow it’s amazing, I want to buy a van and travelling next year 🚌
-                                        </div>
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-10.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Nala Hester</span>
+                                        <span class="message-time">11:54 AM</span>
                                     </div>
-                                </li> 
-
-                                <div class="chat-divider">Today</div>
-
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-10.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Nala Hester</span>
-                                            <span class="message-time">11:54 AM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            Working from a van in Australia isn’t feasible if you 
-                                            need internet. It may have improved over the last years 
-                                            but I spent some time in a camper van around Tasmania and 
-                                            internet was a real problem (and Tasmania is tiny compared to 
-                                            the rest of the country).
-                                        </div>
+                                    <div class="message-text">
+                                        Working from a van in Australia isn’t feasible if you
+                                        need internet. It may have improved over the last years
+                                        but I spent some time in a camper van around Tasmania and
+                                        internet was a real problem (and Tasmania is tiny compared to
+                                        the rest of the country).
                                     </div>
-                                </li>
+                                </div>
+                            </li>
 
-                                <li class="message-item">
-                                    <img src="/img/user_avatars/user-11.png" alt="" width="32" height="32">
-                                    <div class="message-data">
-                                        <div class="message-header">
-                                            <span class="message-sender">Ramon Bateman</span>
-                                            <span class="message-time">11:59 AM</span>
-                                        </div>
-                                        <div class="message-text">
-                                            <a href="#" class="user-mention">@aa_da</a>
-                                            @aa_da What's the reason for the van? Saving money or just 
-                                            like to get outside? If you've got a stable source of income 
-                                            you could always do some short term Airbnbs + buy a truck/topper, 
-                                            build a platform in the back. That way you can always convert it 
-                                            back to a truck and sleep in an apartment if you want.
-                                        </div>
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-11.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Ramon Bateman</span>
+                                        <span class="message-time">11:59 AM</span>
                                     </div>
-                                </li> 
+                                    <div class="message-text">
+                                        <a href="#" class="link-primary">@aa_da</a>
+                                        What's the reason for the van? Saving money or just
+                                        like to get outside? If you've got a stable source of income
+                                        you could always do some short term Airbnbs + buy a truck/topper,
+                                        build a platform in the back. That way you can always convert it
+                                        back to a truck and sleep in an apartment if you want.
+                                    </div>
+                                </div>
+                            </li>
 
+
+
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-7.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Jeshua Stout</span>
+                                        <span class="message-time">6:38 PM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        <a href="#" class="link-primary">@pierrhack</a>
+                                        I did for 6 days in Iceland
+                                    </div>
+                                </div>
+                            </li>
+
+                            <div class="chat-divider">Monday, October 22nd</div>
+
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-8.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Harold Adams</span>
+                                        <span class="message-time">5:02 PM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        Which country to visit next? This is a photo with my
+                                        friends - celebrating in Bali 😎
+                                    </div>
+                                    <ul class="message-attachment-list">
+                                        <li><a href="/img/user_static/image/my-top-places.jpg" class="link-primary" target="blank">
+                                            my-top-places.jpg
+                                        </a></li>
+                                    </ul>
+                                    <ul class="message-attachment-list-static">
+                                        <li><img src="/img/user_static/image/my-top-places.jpg" alt="my-top-places" width="266" height="200"></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <div class="chat-divider">Yesterday</div>
+
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-9.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Aada Laine</span>
+                                        <span class="message-time">11:54 AM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        <a href="#" class="link-primary">@har_adams</a>
+                                        wow it’s amazing, I want to buy a van and travelling next year 🚌
+                                    </div>
+                                </div>
+                            </li>
+
+                            <div class="chat-divider">Today</div>
+
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-10.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Nala Hester</span>
+                                        <span class="message-time">11:54 AM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        Working from a van in Australia isn’t feasible if you
+                                        need internet. It may have improved over the last years
+                                        but I spent some time in a camper van around Tasmania and
+                                        internet was a real problem (and Tasmania is tiny compared to
+                                        the rest of the country).
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="message-item">
+                                <img src="/img/user_avatars/user-11.png" alt="" width="32" height="32">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <span class="message-sender">Ramon Bateman</span>
+                                        <span class="message-time">11:59 AM</span>
+                                    </div>
+                                    <div class="message-text">
+                                        <a href="#" class="link-primary">@aa_da</a>
+                                        What's the reason for the van? Saving money or just
+                                        like to get outside? If you've got a stable source of income
+                                        you could always do some short term Airbnbs + buy a truck/topper,
+                                        build a platform in the back. That way you can always convert it
+                                        back to a truck and sleep in an apartment if you want.
+                                    </div>
+                                </div>
+                            </li>
                         </ol>
                     </div>
+                </div>
 
-                    <form action="/" method="post" class="input-message">
-                        <fieldset>
-                            <button type="button" class="attachment"></button>
-                            <button type="button" class="voice-message"></button>
-                            <input type="text" name="message" id="write-message" class="text-message" minlength="1"
-                                placeholder="Message in #general" oninput="hanleSendMessage()" required>
-                            <button type="submit" class="send-message" id="send-message"></button>
-                            <script type="text/javascript" src="js/send_message.js"></script>
-                        </fieldset>
-                        <button type="button" class="emoji-select"></button>
-                    </form>
+                <form action="/" method="post" class="input-message">
+                    <fieldset>
+                        <button type="button" class="attachment"></button>
+                        <button type="button" class="voice-message"></button>
+                        <input type="text" name="message" id="write-message" class="text-message" minlength="1"
+                            placeholder="Message in #general" oninput="hanleSendMessage()" required>
+                        <button type="submit" class="send-message" id="send-message"></button>
+                        <script type="text/javascript" src="js/send_message.js"></script>
+                    </fieldset>
+                    <button type="button" class="emoji-select"></button>
+                </form>
             </main>
 
             <aside class="profile-panel">
@@ -492,5 +508,6 @@
         </div>
 
     </div>
+    <script src="/js/scroll-bottom.js" type="text/javascript"></script>
 </body>
 </html>
