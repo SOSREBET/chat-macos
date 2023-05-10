@@ -9,6 +9,7 @@
     --white-80: rgba(255, 255, 255, 0.8);
     --black: #000000;
     --black-0001: rgb(0, 0, 0, 0.0001);
+    --black-14: rgba(0, 0, 0, 0.14);
     --black-20: rgb(0, 0, 0, 0.20);
     --black-24: rgb(0, 0, 0, 0.24);
     --black-75: rgb(0, 0, 0, 0.75);
@@ -33,7 +34,6 @@
 
     --profile-grey: #5F6164;
     --profile-white-dull: #E8E8EB;
-    /* --profile-blue: #3577EF; */
 }
 
 /* Global */
@@ -42,6 +42,21 @@ html, body {
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 12px;
+    background-image: url('/img/mac_dots.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 9px;
+    top: 10px;
+    cursor: pointer;
+    user-select: none;
+    /* По сути можно было не делать) */
 }
 
 body {
@@ -126,39 +141,34 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: blur(30px);
-    -webkit-filter: blur(30px);
-    -moz-filter: blur(30px);
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
     transform: scale(1.1);
 }
 
 /* Nav servers */
 
 .nav-servers {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 70px;
     background-color: var(--black-75);
     padding-top: 41.5px;
+    max-height: 100vh;
 }
 
-.servers {
-    max-height: calc(100vh - 100px);
+.servers, .server-list {
+    height: 100%;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.servers::-webkit-scrollbar {
+.servers::-webkit-scrollbar, .server-list::-webkit-scrollbar {
     display: none;
 }
 
 /* Server list */
-
-.server-list {
-    width: 70px;
-}
 
 .server-item {
     opacity: 0.3;
@@ -171,6 +181,7 @@ body {
     background-color: var(--server-bg);
     border-radius: 50%;
 }
+
 
 .server-item a {
     display: block;
@@ -199,15 +210,11 @@ body {
 
 /* Add server */
 
-.add-server-wrapper {
-    width: 70px;
-    height: 58px;
-}
-
 .add-server-wrapper a {
-    display: block;
+    display: flex;
     height: 100%;
-    padding: 9px 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-server {
@@ -262,9 +269,10 @@ body {
 .sidebar {
     display: grid;
     grid-template-rows: 90px 1fr;
-    padding: 35px 6.5px 0px 23px;
+    padding: 35px 6.5px 15px 23px;
     background-color: var(--sidebar-bg);
     color: var(--white);
+    max-height: 100vh;
 }
 
 /* Sidebar menu */
@@ -466,7 +474,7 @@ body {
 
 .nav-channels-friends {
     padding-right: 16.5px;
-    max-height: calc(100vh - 145px);
+    height: 100%;
     overflow-y: auto;
     scrollbar-color: var(--white-40) transparent;
 }
@@ -837,6 +845,7 @@ ul.friend-list {
     height: 100%;
     padding-right: 11px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .chat-messages-inner::-webkit-scrollbar-track {
@@ -918,13 +927,52 @@ ul.message-attachment-list-static {
     flex-flow: column wrap;
 }
 
-.message-attachment-list-static li {
+.message-attachment-list-static > li {
     width: 266px;
     height: 200px;
+    position: relative;
 }
 
-.message-attachment-list-static li:not(:last-child) {
+.message-attachment-list-static > li:not(:last-child) {
     margin-bottom: 10px;
+}
+
+ul.reaction-list {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 6px;
+    max-width: 111px;
+    left: 246px;
+    top: 185px;
+    padding: 3px 11px 5px 6px;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: 0px 2px 8px var(--black-14);
+}
+
+.reaction {
+    width: 27px;
+    height: 16px;
+    display: flex;
+    transition: color 0.2s;
+}
+
+.reaction:hover, .reaction:active {
+    color: var(--btn-primary-bg);
+    cursor: pointer;
+    user-select: none;
+}
+
+.reaction-emoji {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.reaction-count {
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .message-attachment-list-static img {
