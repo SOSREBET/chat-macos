@@ -49,7 +49,7 @@ body::before {
     position: absolute;
     width: 52px;
     height: 12px;
-    background-image: url('/img/mac_dots.png');
+    background-image: url('../img/mac_dots.png');
     background-repeat: no-repeat;
     background-position: center;
     left: 9px;
